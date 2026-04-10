@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pomodoro Timer Meeting Minutes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1>Pomodoro Timer Meeting Minutes</h1>
+      <hr>
+      <nav>
+        <ol>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#attendees">Attendees</a></li>
+          <li><a href="#minutes">Minutes</a></li>
+          <li><a href="#action-items">Action Items</a></li>
+          <li><a href="#next-meeting">Next Meeting Schedule</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <main>  
+        <section id="agenda">
+            <h2>Agenda</h2>
+            <ul>
+            <li>Review of previous action items</li>
+            <li>Discussion on project progress</li>
+            <li>Planning for next sprint</li>
+            <li>Any other business</li>
+            <li>Next meeting schedule</li>
+            </ul>
+        </section>
+    
+        <section id="attendees">
+            <h2>Attendees</h2>
+            <ul>
+            <li>Alice Smith</li>
+            <li>Bob Johnson</li>
+            <li>Charlie Davis</li>
+            <li>Diana Evans</li>
+            </ul>
+
+            <h3>Online Attendees</h3>
+            <ul>
+            <li>Eve Wilson</li>
+            <li>Frank Brown</li>
+            </ul>
+        </section>
+    
+        <section id="minutes">
+            <div><b>Note:</b> The following minutes are a summary of the meeting and may not capture every detail discussed.</div>
+            <span><b>Disclaimer:</b> The minutes are intended for internal use <strong>only</strong> and should <em>not</em> be shared outside the team without permission.</span>
+            <h2>Minutes</h2>
+            <p>The meeting started at 10:00 AM. Alice reviewed the previous action items, and all were completed successfully. Bob provided an update on the project progress, highlighting that we are on track to meet our deadlines. Charlie discussed the planning for the next sprint, and the team agreed on the tasks to be completed. Eve Wilson and Frank Brown participated in the discussion by contributing their insights and suggestions. Finally, there was a brief discussion on any other business, but no additional items were raised.</p>
+        </section>
+    
+        <section id="action-items">
+            <h2>Action Items</h2>
+            <ul>
+            <li>Alice to prepare the report for the next sprint by next Monday.</li>
+            <li>Bob to coordinate with the design team for the new UI mockups.</li>
+            <li>Charlie to set up a follow-up meeting for next week.</li>
+            </ul>
+        </section>
+
+        <section id="next-meeting">
+            <h2>Next Meeting Schedule</h2>
+            <p>The next meeting is scheduled for <i>Tuesday, June 30th</i> at 10:00 AM. The agenda will be shared a week in advance.</p>
+        </section>
+    </main>
+
+    <footer>
+      <hr>
+
+      <details>
+        <summary>Pomodoro Timer Samples</summary>
+        <a href="https://pomofocus.io/">Pomodoro Timer</a> <br> <br>
+        <img src="/pomodoro.webp" alt="Pomodoro Timer Image" width="200" height="200"> <br>
+        <audio controls>
+          <source src="/pomodoro_click.mp3" type="audio/mpeg">
+        </audio> <br>
+        <video controls width="320" height="240">
+          <source src="/pomodoro_demo.mp4" type="video/mp4">
+        </video> <br>
+      </details>
+      <p>&copy; 2026 Pomodoro Timer Team. All rights reserved.</p>
+      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+      <form action="/submit-data" method="POST">
+        <fieldset>
+          <legend>Contact Us</legend>
+          <p>If you have any questions or feedback, please fill out the form below:</p>
+        </fieldset>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="user_email"> <br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="user_message"></textarea> <br>
+
+        <label for="reason">Reason for Contact:</label>
+        <select id="reason" name="contact_reason">
+          <option value="feedback">Feedback</option>
+          <option value="inquiry">Inquiry</option>
+          <option value="support">Support</option>
+          <option value="other">Other</option>
+        </select> <br>
+
+        <label for="rating">Rate Our Service:</label>
+        <input list = "ratings" id="rating" name="user_rating">
+        <datalist id="ratings">
+          <option value="Excellent">
+          <option value="Good">
+          <option value="Average"> 
+          <option value="Poor">
+        </datalist> <br>
+
+        <button type="submit">Send</button>
+      </form>
+    </footer>
+  </body>
+</html>
