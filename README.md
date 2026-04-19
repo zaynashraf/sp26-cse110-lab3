@@ -1,3 +1,3 @@
 # Pomodoro Meeting Minutes
 
-https://zaynashraf.github.io/pomodoro-meeting-minutes/
+[Site](https://zaynashraf.github.io/sp26-cse110-lab3/)
