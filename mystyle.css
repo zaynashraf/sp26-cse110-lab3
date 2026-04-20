@@ -5,8 +5,14 @@
   --header-color: tan;
 }
 
-/* Header box model: border, margin (long + short), padding (long + short), only bottom border visible, 3 relative & absolute units */
+/* Universal selector: use border-box sizing for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Header box model: border, margin (long + short), padding (long + short), only bottom border visible, 3 absolute & 3 relative units */
 header {
+  border: 0.132cm solid black;
   margin-top: 20px;
   padding-top: 0.208in;
   margin: 0 0 1.25rem 0;
@@ -16,7 +22,7 @@ header {
   border-top: 0ch;
 }
 
-/* Agenda heading color using CSS variable with rgb fallback */
+/* Agenda heading color using CSS variable with rgb fallback, nested seelctor */
 #agenda {
 
   h2 {
@@ -63,12 +69,12 @@ header {
   margin-bottom: 25px;
 }
 
-/* Hide the pomodoro samples dropdown by default */
+/* Hide the pomodoro samples dropdown */
 details {
   display: none;
 }
 
-/* 3rd party Google Font applied globally */
+/* 3rd party Google Font */
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -108,8 +114,8 @@ nav a:active {
   color: darkred;
 }
 
-/* Lay out nav links horizontally with even spacing, wrap on smaller screens */
-nav ol {
+/* Child combinator: lay out nav's direct child ol as flex */
+nav > ol {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -125,18 +131,44 @@ form {
   align-items: center;
 }
 
-/* Fieldset and button span both columns */
-form fieldset {
+/* Selector list: fieldset and button both span the full grid width */
+form fieldset, form button {
   grid-column: 1 / -1;
 }
 
-form button {
-  grid-column: 1 / -1;
+/* Class selector: add consistent padding to content sections */
+.content-section {
+  padding-left: 10px;
+}
+
+/* Attribute selector: style the email input field */
+[type="email"] {
+  border: 1px solid grey;
+}
+
+/* Adjacent sibling combinator: add spacing to a ul right after an h2 */
+h2 + ul {
+  margin-top: 5px;
+}
+
+/* General sibling combinator: style any p that follows an h2 */
+h2 ~ p {
+  line-height: 1.5;
+}
+
+/* Combining two selectors: target section elements with the content-section class */
+section.content-section {
+  margin-left: 5px;
+}
+
+/* :has() selector: style the section that contains an h3 (attendees) */
+section:has(h3) {
+  border-left: 3px solid tan;
 }
 
 /* Stack nav links vertically and switch form to single column on small screens */
 @media (max-width: 600px) {
-  nav ol {
+  nav > ol {
     flex-direction: column;
     align-items: center;
   }
