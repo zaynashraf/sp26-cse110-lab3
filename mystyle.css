@@ -1,0 +1,147 @@
+/* Styles for the Pomodoro Timer Meeting Minutes page */
+
+/* CSS variable for reusable header color */
+:root {
+  --header-color: tan;
+}
+
+/* Header box model: border, margin (long + short), padding (long + short), only bottom border visible, 3 relative & absolute units */
+header {
+  margin-top: 20px;
+  padding-top: 0.208in;
+  margin: 0 0 1.25rem 0;
+  padding: 0 0 0.4em 0;
+  border-right: 0ch;
+  border-left: 0ch;
+  border-top: 0ch;
+}
+
+/* Agenda heading color using CSS variable with rgb fallback */
+#agenda {
+
+  h2 {
+    color: var(--header-color, rgb(210, 180, 140));
+  }
+}
+
+/* Attendees heading color using hex code, auto margin for centering */
+#attendees {
+  h2 {
+    color: #D2B48C;
+    margin: auto;
+  }
+}
+
+/* Minutes heading color using hsl, display set to block */
+#minutes {
+  h2 {
+    color: hsl(34, 44%, 69%);
+  }
+
+  display: block;
+}
+
+/* Action items heading color using wider-gamut color() */
+#action-items {
+  h2 {
+    color: color(srgb 0.8235 0.7059 0.549 / 1);
+  }
+}
+
+/* Next meeting heading using color-mix, dashed bottom border with rounded corners */
+#next-meeting {
+  h2 {
+    color: color-mix(in srgb, sienna 40%, white);
+  }
+
+  border-bottom-style: dashed;
+  border-bottom-color: black;
+  border-bottom-width: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* Hide the pomodoro samples dropdown by default */
+details {
+  display: none;
+}
+
+/* 3rd party Google Font applied globally */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Constrain main content width with min and max bounds */
+main {
+  width: 90%;
+  max-width: 900px;
+  min-width: 280px;
+}
+
+/* Give the message textarea a fixed height */
+textarea {
+  height: 80px;
+}
+
+/* Keep header pinned to the top of the viewport while scrolling */
+header {
+  position: sticky;
+  top: 0;
+  background-color: lightgrey;
+}
+
+/* Offset the note box slightly from its normal position */
+#minutes div {
+  position: relative;
+  left: 10px;
+}
+
+/* Change nav link color on hover */
+nav a:hover {
+  color: sienna;
+}
+
+/* Darken nav link color while being clicked */
+nav a:active {
+  color: darkred;
+}
+
+/* Lay out nav links horizontally with even spacing, wrap on smaller screens */
+nav ol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+/* Two-column grid for the contact form: labels on the left, inputs on the right */
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Fieldset and button span both columns */
+form fieldset {
+  grid-column: 1 / -1;
+}
+
+form button {
+  grid-column: 1 / -1;
+}
+
+/* Stack nav links vertically and switch form to single column on small screens */
+@media (max-width: 600px) {
+  nav ol {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}
